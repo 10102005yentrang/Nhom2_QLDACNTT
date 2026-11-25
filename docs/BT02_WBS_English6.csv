@@ -1,0 +1,64 @@
+﻿WBS,Name,Level,NodeType,OwnerRole,ScheduleID,Predecessors,DurationDays,EffortPersonDays,AcceptanceCriteria
+1,Web app hỗ trợ tự học Tiếng Anh lớp 6 – Global Success,1,Summary,PM,,,,224,
+1.1,Quản lý dự án,2,ControlAccount,,,,,13,
+1.1.1,"Khởi tạo, Charter, SOW, WBS",3,WorkPackage,PM,A,,3,3,Hồ sơ dự thảo được duyệt
+1.1.2,"Giám sát tiến độ, chi phí, rủi ro, CR và báo cáo tuần",3,LOE,PM,,,,10,"Báo cáo tuần, nhật ký rủi ro và CR được cập nhật"
+1.2,Phân tích và thiết kế,2,ControlAccount,,,,,32,
+1.2.1,Khảo sát,3,ControlAccount,,,,,11,
+1.2.1.1,Khảo sát người dùng và thiết bị,4,WorkPackage,BA,B,A,3,3,"Biên bản khảo sát xác nhận nhu cầu tự học, thiết bị và kết nối; A3 được đối chiếu"
+1.2.1.2,"Kiểm kê SGK, audio, quyền sử dụng và ma trận hoạt động",4,WorkPackage,BA,C,A,5,8,12 Unit/4 Review được kiểm kê
+1.2.2,Đặc tả,3,ControlAccount,,,,,10,
+1.2.2.1,"SRS tài khoản, học liệu, tiến độ",4,WorkPackage,BA,D,B;C,3,3,SRS F01 F02 F06 có user story và tiêu chí chấp nhận
+1.2.2.2,"SRS dạng bài, kỹ năng, bài mở và quy tắc chấm",4,WorkPackage,BA,E,B;C,5,5,"SRS F03 F04 F05 F07 và quy tắc chấm, rubric được review"
+1.2.2.3,Duyệt SRS và ma trận truy vết,4,WorkPackage,PM,F,D;E,2,2,Sponsor duyệt
+1.2.3,Thiết kế,3,ControlAccount,,,,,11,
+1.2.3.1,ERD và kiến trúc/API,4,WorkPackage,Dev,G,F,4,4,ERD và API review
+1.2.3.2,Prototype responsive,4,WorkPackage,Frontend,H,F,4,4,Prototype luồng tự học responsive được review
+1.2.3.3,Nền tảng Dev/Test/Staging,4,WorkPackage,Dev,I,G,3,3,Dev/Test/Staging chạy được; hướng dẫn cấu hình và migration có sẵn
+1.3,Phát triển và tích hợp,2,ControlAccount,,,,,78,
+1.3.1,Module Tài khoản và bảo mật,3,ControlAccount,,,,,7,
+1.3.1.1,BE – Tài khoản và bảo mật,4,WorkPackage,Backend,J,I,4,4,Đăng nhập và hồ sơ tối thiểu hoạt động; truy cập trái quyền bị từ chối
+1.3.1.2,FE – Tài khoản và bảo mật,4,WorkPackage,Frontend,K,H;J,3,3,"Đăng nhập, hồ sơ và điều hướng hoạt động trên thiết bị mục tiêu"
+1.3.2,"Module Danh mục, từ vựng, ngữ pháp, audio",3,ControlAccount,,,,,10,
+1.3.2.1,"BE – Danh mục, từ vựng, ngữ pháp, audio",4,WorkPackage,Backend,L,I;J,5,5,"API danh mục 12 Unit/4 Review, bài học, từ vựng, ngữ pháp, glossary và audio đạt test"
+1.3.2.2,"FE – Danh mục, từ vựng, ngữ pháp, audio",4,WorkPackage,Frontend,M,H;L,5,5,"Duyệt Unit/Review, tra cứu và phát audio đúng dữ liệu"
+1.3.3,Module Bài tập tương tác khách quan,3,ControlAccount,,,,,16,
+1.3.3.1,BE – Bài tập tương tác khách quan,4,WorkPackage,Backend,N,I;J,8,8,Đủ dạng F03 theo SRS
+1.3.3.2,FE – Bài tập tương tác khách quan,4,WorkPackage,Frontend,O,H;N,8,8,"Mọi dạng F03 theo SRS hiển thị, nhập và gửi đáp án được"
+1.3.4,"Module Luyện nghe, đọc, nói, viết",3,ControlAccount,,,,,11,
+1.3.4.1,"BE – Luyện nghe, đọc, nói, viết",4,WorkPackage,Backend,P,I;J,5,5,"API nội dung kỹ năng, bài viết, gợi ý và rubric đạt test"
+1.3.4.2,"FE – Luyện nghe, đọc, nói, viết",4,WorkPackage,Frontend,Q,H;P,6,6,Có hướng dẫn và tự đánh giá F04
+1.3.5,"Module Communication, Project, Now I Can",3,ControlAccount,,,,,9,
+1.3.5.1,"BE – Communication, Project, Now I Can",4,WorkPackage,Backend,R,I;J,4,4,"Lưu ghi chú, kết quả Project và Now I Can theo tài khoản"
+1.3.5.2,"FE – Communication, Project, Now I Can",4,WorkPackage,Frontend,S,H;R,5,5,"Hiển thị hướng dẫn Communication, role-play, nhóm, trò chơi, Project và Now I Can; lưu kết quả được"
+1.3.6,Module Chấm điểm và tiến độ,3,ControlAccount,,,,,10,
+1.3.6.1,BE – Chấm điểm và tiến độ,4,WorkPackage,Backend,T,I;J;N,6,6,Quy tắc chấm và lịch sử đúng
+1.3.6.2,FE – Chấm điểm và tiến độ,4,WorkPackage,Frontend,U,H;T,4,4,"Hiển thị phản hồi, làm lại, lịch sử và tiến độ cá nhân đúng dữ liệu"
+1.3.7,Module Nhập dữ liệu có cấu trúc,3,ControlAccount,,,,,7,
+1.3.7.1,BE – Nhập dữ liệu có cấu trúc,4,WorkPackage,Backend,V,I;J,4,4,"Nhập dữ liệu có cấu trúc, kiểm tra schema và báo lỗi dữ liệu sai"
+1.3.7.2,Công cụ nhập và kiểm tra dữ liệu,4,WorkPackage,Dev,W,H;V,3,3,Script hoặc công cụ nhập kiểm tra dữ liệu và xuất nhật ký lỗi; không yêu cầu Admin UI
+1.3.8,Tích hợp E2E,3,WorkPackage,Dev,X,K;M;O;Q;S;U;W,4,8,Luồng đăng nhập–học–làm bài–xem kết quả và F01–F07 tích hợp trên staging
+1.4,Kiểm thử và chấp nhận,2,ControlAccount,,,,,28,
+1.4.1,Kế hoạch test và test case truy vết,3,WorkPackage,QA,Y,F,5,5,Test case ánh xạ SRS và hoạt động SGK; có kịch bản C1–C6
+1.4.2,Thực thi test,3,ControlAccount,,,,,14,
+1.4.2.1,Kiểm thử chức năng và hồi quy,4,WorkPackage,QA,Z,X;Y,6,8,100% test quy tắc chấm đạt; không còn lỗi Critical; có báo cáo hồi quy
+1.4.2.2,Kiểm thử tải và tương thích,4,WorkPackage,QA,AA,X;Y,3,3,Đạt C4
+1.4.2.3,Kiểm thử bảo mật và quyền truy cập,4,WorkPackage,QA,AB,X;Y,3,3,"Kiểm thử truy cập trái quyền, dữ liệu cá nhân và học liệu đạt; có báo cáo"
+1.4.3,UAT,3,ControlAccount,,,,,9,
+1.4.3.1,UAT tự học và ghi nhận phản hồi,4,WorkPackage,BA,AC,AI,3,3,Đạt C5–C6
+1.4.3.2,"Sửa lỗi UAT, hồi quy và ký biên bản",4,WorkPackage,QA,AD,AC,4,6,"Lỗi chặn UAT được xử lý, hồi quy đạt và biên bản được xác nhận"
+1.5,Dữ liệu ban đầu và triển khai,2,ControlAccount,,,,,60,
+1.5.1,Dữ liệu,3,ControlAccount,,,,,54,
+1.5.1.1,Chuẩn hóa học liệu 12 Unit/4 Review,4,WorkPackage,Content,AE,C;F,8,16,Học liệu 12 Unit/4 Review chuẩn hóa theo ma trận; có nguồn và quyền sử dụng
+1.5.1.2,"Soạn và nhập bài tập, rubric, audio hợp pháp",4,WorkPackage,Content,AF,AE;W,10,30,"Bài tập, rubric và audio hợp pháp được nhập đủ theo ma trận đã duyệt"
+1.5.1.3,Đối soát nội dung theo từng hoạt động,4,WorkPackage,QA,AG,AF,5,8,Đạt C1
+1.5.2,Triển khai,3,ControlAccount,,,,,6,
+1.5.2.1,Kế hoạch triển khai và rollback,4,WorkPackage,Dev,AH,X,2,2,"Checklist triển khai, sao lưu và rollback được review"
+1.5.2.2,Triển khai demo và smoke test,4,WorkPackage,Dev,AI,AG;AH;Z;AA;AB,2,2,Demo triển khai thành công; smoke test luồng tự học đạt
+1.5.2.3,Phát hành bản cuối,4,WorkPackage,Dev,AJ,AD,2,2,"Bản cuối gắn tag, smoke test đạt sau sửa lỗi UAT"
+1.6,Bàn giao và hỗ trợ,2,ControlAccount,,,,,13,
+1.6.1,Bàn giao,3,ControlAccount,,,,,9,
+1.6.1.1,Hướng dẫn học sinh và triển khai,4,WorkPackage,BA,AK,AI,3,3,Hướng dẫn học sinh và triển khai được kiểm tra bằng thao tác thực tế
+1.6.1.2,"Hồ sơ bàn giao, nghiệm thu",4,WorkPackage,PM,AL,AJ;AK,3,3,Hồ sơ D1–D7 đầy đủ; biên bản nghiệm thu và phiên bản được đối chiếu
+1.6.1.3,"Slide, demo và bảo vệ",4,WorkPackage,PM,AM,AL,3,3,Slide và kịch bản demo đầy đủ; bảo vệ theo lịch học phần
+1.6.2,Hỗ trợ sửa lỗi đến ngày bảo vệ,3,LOE,Dev,,,,4,"Lỗi được ghi nhận, phân loại và xử lý đến ngày bảo vệ"
